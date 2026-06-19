@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pg模拟器 · 知识入口介绍页</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #faf9f8;
+            color: #1e1e1e;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.7;
+            padding: 2.4rem 1.2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .page {
+            max-width: 780px;
+            width: 100%;
+        }
+
+        /* 极简标题层级 */
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 540;
+            letter-spacing: -0.02em;
+            margin-bottom: 0.2rem;
+            color: #1a1a1a;
+            border-left: 4px solid #d4b48c;
+            padding-left: 1rem;
+        }
+
+        .subhead {
+            font-size: 1rem;
+            color: #6b6b6b;
+            margin-top: -0.2rem;
+            margin-bottom: 2.8rem;
+            padding-left: 1.4rem;
+            font-weight: 390;
+        }
+
+        h2 {
+            font-size: 1.3rem;
+            font-weight: 480;
+            margin: 2.6rem 0 1rem 0;
+            color: #2c2c2c;
+            letter-spacing: 0.01em;
+            border-bottom: 1px solid #e4ddd6;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            font-size: 1.05rem;
+            font-weight: 470;
+            margin: 1.6rem 0 0.5rem 0;
+            color: #3a3a3a;
+        }
+
+        p {
+            margin-bottom: 1.1rem;
+            font-size: 0.98rem;
+            color: #2b2b2b;
+        }
+
+        /* 卡片 / 目录感区块 */
+        .card-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.2rem;
+            margin: 1.6rem 0 1rem 0;
+        }
+
+        .card {
+            flex: 1 1 200px;
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 1.4rem 1.2rem 1.6rem 1.2rem;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03), 0 6px 18px rgba(0, 0, 0, 0.02);
+            border: 1px solid #f0ebe5;
+            transition: box-shadow 0.15s;
+        }
+
+        .card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04), 0 8px 24px rgba(0, 0, 0, 0.03);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            margin-bottom: 0.6rem;
+            font-weight: 500;
+            font-size: 1.05rem;
+            color: #1f1f1f;
+        }
+
+        .card p {
+            font-size: 0.92rem;
+            margin-bottom: 0.2rem;
+            color: #4b4b4b;
+        }
+
+        .card .tag {
+            display: inline-block;
+            font-size: 0.72rem;
+            background: #efeae3;
+            padding: 0.16rem 0.6rem;
+            border-radius: 20px;
+            color: #4a3f35;
+            margin-top: 0.5rem;
+        }
+
+        /* 提示区 / 信息区 */
+        .info-box {
+            background: #f1ede8;
+            border-radius: 12px;
+            padding: 1.6rem 1.6rem 1.4rem 1.6rem;
+            margin: 1.8rem 0;
+            border-left: 4px solid #b7a38e;
+        }
+
+        .info-box p {
+            margin-bottom: 0.5rem;
+            font-size: 0.96rem;
+        }
+
+        .info-box strong {
+            font-weight: 560;
+            color: #2d241c;
+        }
+
+        .faq-item {
+            margin: 1.4rem 0;
+        }
+
+        .faq-item .q {
+            font-weight: 480;
+            color: #1e1e1e;
+            margin-bottom: 0.2rem;
+            font-size: 1rem;
+        }
+
+        .faq-item .a {
+            color: #4f4f4f;
+            font-size: 0.95rem;
+            padding-left: 0.2rem;
+        }
+
+        hr {
+            border: none;
+            border-top: 1px solid #e2dbd2;
+            margin: 2.2rem 0 1.4rem 0;
+        }
+
+        .footer-note {
+            font-size: 0.82rem;
+            color: #8d857c;
+            text-align: center;
+            margin-top: 2.8rem;
+            border-top: 1px solid #e9e2d9;
+            padding-top: 1.8rem;
+        }
+
+        a {
+            color: #6a4f3a;
+            text-decoration: none;
+            border-bottom: 1px solid #d6c8ba;
+            transition: border-color 0.1s, color 0.1s;
+        }
+
+        a:hover {
+            color: #3f2f24;
+            border-bottom-color: #8f7a68;
+        }
+
+        /* 非常简洁的响应式 */
+        @media (max-width: 480px) {
+            body {
+                padding: 1.6rem 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+                padding-left: 0.8rem;
+            }
+            .subhead {
+                font-size: 0.9rem;
+                padding-left: 1rem;
+            }
+            .card-grid {
+                flex-direction: column;
+            }
+            .card {
+                flex: 1 1 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+
+        <h1>pg模拟器 · 用途速览</h1>
+        <div class="subhead">一个偏向知识库风格的入门页 · 快速识别站点在做什么</div>
+
+        <p style="margin-bottom: 1.8rem;">
+            如果你是第一次遇到 <a href="https://cn-pgsimulator.com">pg模拟器</a> 这个说法，
+            很可能想先弄清楚：这是一个工具？一个在线服务？还是某个领域的模拟环境？
+            下面用几个简明区域帮你建立整体印象，避免在信息碎片里绕路。
+        </p>
+
+        <!-- 目录感卡片区：类似知识库入口 -->
+        <div class="card-grid">
+            <div class="card">
+                <h3>📋 核心定位</h3>
+                <p>提供基于 pg 体系的模拟交互环境，侧重流程演示与参数调整，不涉及真实生产数据。</p>
+                <span class="tag">模拟沙箱</span>
+            </div>
+            <div class="card">
+                <h3>⚙️ 操作对象</h3>
+                <p>围绕 pg 相关指令、配置、或典型场景进行模仿操作，适合新手熟悉界面逻辑。</p>
+                <span class="tag">学习辅助</span>
+            </div>
+            <div class="card">
+                <h3>🧩 适用人群</h3>
+                <p>运维入门、学生、技术评估者、想快速体验 pg 环境但又不想本地搭建的用户。</p>
+                <span class="tag">低门槛尝试</span>
+            </div>
+        </div>
+
+        <!-- 说明区：更具体的描述 -->
+        <h2>这个站点主要解决什么问题</h2>
+        <p>
+            很多时候我们只是想看一眼某个操作的结果，或者验证一下思路，并不想立刻配置完整的本地环境。
+            <a href="https://cn-pgsimulator.com">pg模拟器</a> 在这个方向上提供了一个中间层：
+            它把典型操作封装成可交互的模拟模块，让你在浏览器里就能完成一系列模拟步骤。
+            不需要下载、不需要申请云资源，打开页面就能开始尝试。
+        </p>
+        <p>
+            当然，模拟器毕竟不是真实集群，它更适合用来理解概念、熟悉流程、或者做简单的功能验证。
+            如果你需要高并发压测或复杂故障演练，还是建议使用真实环境。
+        </p>
+
+        <!-- 提示区：偏生活化语气，保持正式感 -->
+        <div class="info-box">
+            <p><strong>💡 一点提示</strong></p>
+            <p>
+                初次使用模拟器时，建议先花两分钟浏览一下界面里的预设参数和说明文字。
+                很多选项都已经给了典型值，你只需微调一两个变量就能看到效果变化。
+                如果遇到不明白的术语，可以随时回到这个介绍页对照理解。
+            </p>
+        </div>
+
+        <!-- 相关信息区：FAQ摘要、场景举例 -->
+        <h2>常见疑问摘要</h2>
+
+        <div class="faq-item">
+            <div class="q">▸ 模拟器里的操作会实际影响数据库吗？</div>
+            <div class="a">不会。所有操作都在前端模拟层完成，不连接真实数据库，也不会留存任何数据。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">▸ 我需要在设备上安装额外软件吗？</div>
+            <div class="a">完全不需要。只要设备能打开现代浏览器，访问 <a href="https://cn-pgsimulator.com">pg模拟器</a> 即可直接使用。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="q">▸ 模拟环境能覆盖哪些操作类型？</div>
+            <div class="a">目前侧重基础查询模拟、配置示例演示、以及常见的运维场景复现。具体列表建议进入站点查看菜单或导航区。</div>
+        </div>
+
+        <!-- 场景列举（额外信息区） -->
+        <h2>一些典型使用场景</h2>
+        <p>
+            · 你想向同事解释 pg 的某个参数作用，与其口述不如打开模拟器一起点几下。<br>
+            · 你正在写技术文档，需要截几张干净的模拟界面图，又不想暴露真实 IP 或数据。<br>
+            · 你在课上或分享会中需要一个随时可用的演示环境，pg模拟器 能帮你省去现场配置的麻烦。<br>
+            · 你只是好奇 pg 生态里某个新特性，想快速摸摸看界面长什么样。
+        </p>
+
+        <hr>
+
+        <p style="font-size: 0.94rem;">
+            如果你已经大致了解，可以直接前往 <a href="https://cn-pgsimulator.com">pg模拟器</a> 开始体验。
+            这个介绍页的作用就是帮你快速确认方向，不至于点进去之后感到困惑。
+        </p>
+
+        <div class="footer-note">
+            · 知识库式入口 · 极简留白 ·
+        </div>
+
+    </div>
+</body>
+</html>

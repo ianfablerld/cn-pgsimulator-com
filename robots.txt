@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ianfablerld.github.io/cn-pgsimulator-com/sitemap.xml
